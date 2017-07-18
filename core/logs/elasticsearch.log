@@ -1,0 +1,171 @@
+[2017-07-17T16:45:07,154][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-07-17T16:45:07,993][INFO ][o.e.e.NodeEnvironment    ] [N9sZawi] using [1] data paths, mounts [[(E:)]], net usable_space [289.3gb], net total_space [365.7gb], spins? [unknown], types [NTFS]
+[2017-07-17T16:45:07,994][INFO ][o.e.e.NodeEnvironment    ] [N9sZawi] heap size [1.7gb], compressed ordinary object pointers [true]
+[2017-07-17T16:45:08,001][INFO ][o.e.n.Node               ] node name [N9sZawi] derived from node ID [N9sZawiUQz2l-uDcbqN5FQ]; set [node.name] to override
+[2017-07-17T16:45:08,002][INFO ][o.e.n.Node               ] version[5.3.1-SNAPSHOT], pid[105084], build[Unknown/Unknown], OS[Windows 10/10.0/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-07-17T16:45:08,002][WARN ][o.e.n.Node               ] version [5.3.1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2017-07-17T16:45:20,174][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [aggs-matrix-stats]
+[2017-07-17T16:45:20,174][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [ingest-common]
+[2017-07-17T16:45:20,174][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-expression]
+[2017-07-17T16:45:20,174][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-groovy]
+[2017-07-17T16:45:20,174][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-mustache]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-painless]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [percolator]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [reindex]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [transport-netty3]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [transport-netty4]
+[2017-07-17T16:45:20,175][INFO ][o.e.p.PluginsService     ] [N9sZawi] no plugins loaded
+[2017-07-17T16:45:52,714][INFO ][o.e.n.Node               ] initialized
+[2017-07-17T16:45:52,714][INFO ][o.e.n.Node               ] [N9sZawi] starting ...
+[2017-07-17T16:45:52,864][INFO ][i.n.u.i.PlatformDependent] Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[2017-07-17T16:45:54,985][INFO ][o.e.t.TransportService   ] [N9sZawi] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-07-17T16:45:55,031][WARN ][o.e.b.BootstrapChecks    ] [N9sZawi] initial heap size [130023424] not equal to maximum heap size [2065694720]; this can cause resize pauses and prevents mlockall from locking the entire heap
+[2017-07-17T16:45:58,504][INFO ][o.e.c.s.ClusterService   ] [N9sZawi] new_master {N9sZawi}{N9sZawiUQz2l-uDcbqN5FQ}{NfhPyW1PRWOvW664HtfH4Q}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-07-17T16:45:58,798][INFO ][o.e.g.GatewayService     ] [N9sZawi] recovered [0] indices into cluster_state
+[2017-07-17T16:45:59,555][INFO ][o.e.h.n.Netty4HttpServerTransport] [N9sZawi] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2017-07-17T16:45:59,566][INFO ][o.e.n.Node               ] [N9sZawi] started
+[2017-07-17T16:55:47,451][INFO ][o.e.c.m.MetaDataCreateIndexService] [N9sZawi] [indexpp] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2017-07-17T16:55:47,665][WARN ][r.suppressed             ] path: /indexpp, params: {index=indexpp}
+java.lang.IllegalStateException: decision was not taken, individual object fields cannot be accessed
+	at org.elasticsearch.cluster.routing.allocation.AbstractAllocationDecision.checkDecisionState(AbstractAllocationDecision.java:106) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocateUnassignedDecision.getAllocationDecision(AllocateUnassignedDecision.java:188) ~[main/:?]
+	at org.elasticsearch.gateway.BaseGatewayShardAllocator.allocateUnassigned(BaseGatewayShardAllocator.java:65) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.innerAllocatedUnassigned(GatewayAllocator.java:123) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.allocateUnassigned(GatewayAllocator.java:112) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:321) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:290) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:275) ~[main/:?]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:466) ~[main/:?]
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.executeTasks(ClusterService.java:688) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.calculateTaskOutputs(ClusterService.java:667) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.runTasks(ClusterService.java:623) [main/:?]
+	at org.elasticsearch.cluster.service.ClusterService$UpdateTask.run(ClusterService.java:1139) [main/:?]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:238) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:201) [main/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+[2017-07-17T19:15:28,215][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-07-17T19:15:29,079][INFO ][o.e.e.NodeEnvironment    ] [N9sZawi] using [1] data paths, mounts [[(E:)]], net usable_space [289.3gb], net total_space [365.7gb], spins? [unknown], types [NTFS]
+[2017-07-17T19:15:29,080][INFO ][o.e.e.NodeEnvironment    ] [N9sZawi] heap size [1.7gb], compressed ordinary object pointers [true]
+[2017-07-17T19:15:29,083][INFO ][o.e.n.Node               ] node name [N9sZawi] derived from node ID [N9sZawiUQz2l-uDcbqN5FQ]; set [node.name] to override
+[2017-07-17T19:15:29,083][INFO ][o.e.n.Node               ] version[5.3.1-SNAPSHOT], pid[112732], build[Unknown/Unknown], OS[Windows 10/10.0/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-07-17T19:15:29,083][WARN ][o.e.n.Node               ] version [5.3.1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2017-07-17T19:15:41,013][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [aggs-matrix-stats]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [ingest-common]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-expression]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-groovy]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-mustache]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [lang-painless]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [percolator]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [reindex]
+[2017-07-17T19:15:41,014][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [transport-netty3]
+[2017-07-17T19:15:41,015][INFO ][o.e.p.PluginsService     ] [N9sZawi] loaded module [transport-netty4]
+[2017-07-17T19:15:41,015][INFO ][o.e.p.PluginsService     ] [N9sZawi] no plugins loaded
+[2017-07-17T19:16:03,935][INFO ][o.e.n.Node               ] initialized
+[2017-07-17T19:16:03,936][INFO ][o.e.n.Node               ] [N9sZawi] starting ...
+[2017-07-17T19:16:04,097][INFO ][i.n.u.i.PlatformDependent] Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[2017-07-17T19:16:05,356][INFO ][o.e.t.TransportService   ] [N9sZawi] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-07-17T19:16:05,402][WARN ][o.e.b.BootstrapChecks    ] [N9sZawi] initial heap size [130023424] not equal to maximum heap size [2065694720]; this can cause resize pauses and prevents mlockall from locking the entire heap
+[2017-07-17T19:16:10,073][INFO ][o.e.c.s.ClusterService   ] [N9sZawi] new_master {N9sZawi}{N9sZawiUQz2l-uDcbqN5FQ}{FH1UV5prS-uFIGS4FrGzCw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-07-17T19:16:10,366][INFO ][o.e.g.GatewayService     ] [N9sZawi] recovered [0] indices into cluster_state
+[2017-07-17T19:16:11,254][INFO ][o.e.h.n.Netty4HttpServerTransport] [N9sZawi] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2017-07-17T19:16:11,257][INFO ][o.e.n.Node               ] [N9sZawi] started
+[2017-07-17T19:21:32,766][INFO ][o.e.c.m.MetaDataCreateIndexService] [N9sZawi] [pladdf] creating index, cause [api], templates [], shards [5]/[1], mappings []
+[2017-07-17T19:21:33,083][WARN ][r.suppressed             ] path: /pladdf, params: {index=pladdf}
+java.lang.IllegalStateException: decision was not taken, individual object fields cannot be accessed
+	at org.elasticsearch.cluster.routing.allocation.AbstractAllocationDecision.checkDecisionState(AbstractAllocationDecision.java:106) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocateUnassignedDecision.getAllocationDecision(AllocateUnassignedDecision.java:188) ~[main/:?]
+	at org.elasticsearch.gateway.BaseGatewayShardAllocator.allocateUnassigned(BaseGatewayShardAllocator.java:65) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.innerAllocatedUnassigned(GatewayAllocator.java:123) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.allocateUnassigned(GatewayAllocator.java:112) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:321) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:290) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:275) ~[main/:?]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:466) ~[main/:?]
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.executeTasks(ClusterService.java:688) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.calculateTaskOutputs(ClusterService.java:667) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.runTasks(ClusterService.java:623) [main/:?]
+	at org.elasticsearch.cluster.service.ClusterService$UpdateTask.run(ClusterService.java:1139) [main/:?]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:238) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:201) [main/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+[2017-07-17T19:22:38,078][INFO ][o.e.c.m.MetaDataCreateIndexService] [N9sZawi] [jjdf] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2017-07-17T19:22:38,144][WARN ][r.suppressed             ] path: /jjdf/df/1, params: {index=jjdf, id=1, type=df}
+java.lang.IllegalStateException: decision was not taken, individual object fields cannot be accessed
+	at org.elasticsearch.cluster.routing.allocation.AbstractAllocationDecision.checkDecisionState(AbstractAllocationDecision.java:106) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocateUnassignedDecision.getAllocationDecision(AllocateUnassignedDecision.java:188) ~[main/:?]
+	at org.elasticsearch.gateway.BaseGatewayShardAllocator.allocateUnassigned(BaseGatewayShardAllocator.java:65) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.innerAllocatedUnassigned(GatewayAllocator.java:123) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.allocateUnassigned(GatewayAllocator.java:112) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:321) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:290) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:275) ~[main/:?]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:466) ~[main/:?]
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.executeTasks(ClusterService.java:688) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.calculateTaskOutputs(ClusterService.java:667) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.runTasks(ClusterService.java:623) [main/:?]
+	at org.elasticsearch.cluster.service.ClusterService$UpdateTask.run(ClusterService.java:1139) [main/:?]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:238) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:201) [main/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+[2017-07-17T19:25:50,506][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-07-17T19:25:50,883][INFO ][o.e.e.NodeEnvironment    ] [qsMnsrD] using [1] data paths, mounts [[(E:)]], net usable_space [289.3gb], net total_space [365.7gb], spins? [unknown], types [NTFS]
+[2017-07-17T19:25:50,883][INFO ][o.e.e.NodeEnvironment    ] [qsMnsrD] heap size [1.7gb], compressed ordinary object pointers [true]
+[2017-07-17T19:25:50,888][INFO ][o.e.n.Node               ] node name [qsMnsrD] derived from node ID [qsMnsrDZTXSrWgoALMpMdA]; set [node.name] to override
+[2017-07-17T19:25:50,888][INFO ][o.e.n.Node               ] version[5.3.1-SNAPSHOT], pid[119520], build[Unknown/Unknown], OS[Windows 10/10.0/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2017-07-17T19:25:50,889][WARN ][o.e.n.Node               ] version [5.3.1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2017-07-17T19:26:01,584][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [aggs-matrix-stats]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [ingest-common]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [lang-expression]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [lang-groovy]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [lang-mustache]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [lang-painless]
+[2017-07-17T19:26:01,585][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [percolator]
+[2017-07-17T19:26:01,586][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [reindex]
+[2017-07-17T19:26:01,586][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [transport-netty3]
+[2017-07-17T19:26:01,586][INFO ][o.e.p.PluginsService     ] [qsMnsrD] loaded module [transport-netty4]
+[2017-07-17T19:26:01,587][INFO ][o.e.p.PluginsService     ] [qsMnsrD] no plugins loaded
+[2017-07-17T19:26:09,593][INFO ][o.e.n.Node               ] initialized
+[2017-07-17T19:26:09,593][INFO ][o.e.n.Node               ] [qsMnsrD] starting ...
+[2017-07-17T19:26:09,705][INFO ][i.n.u.i.PlatformDependent] Your platform does not provide complete low-level API for accessing direct buffers reliably. Unless explicitly requested, heap buffer will always be preferred to avoid potential system unstability.
+[2017-07-17T19:26:11,880][INFO ][o.e.t.TransportService   ] [qsMnsrD] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[::1]:9300}
+[2017-07-17T19:26:11,924][WARN ][o.e.b.BootstrapChecks    ] [qsMnsrD] initial heap size [130023424] not equal to maximum heap size [2065694720]; this can cause resize pauses and prevents mlockall from locking the entire heap
+[2017-07-17T19:26:17,057][INFO ][o.e.c.s.ClusterService   ] [qsMnsrD] new_master {qsMnsrD}{qsMnsrDZTXSrWgoALMpMdA}{FNNFxwbwSdWZ054-zPwGag}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-07-17T19:26:17,524][INFO ][o.e.g.GatewayService     ] [qsMnsrD] recovered [0] indices into cluster_state
+[2017-07-17T19:26:18,723][INFO ][o.e.h.n.Netty4HttpServerTransport] [qsMnsrD] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[::1]:9200}
+[2017-07-17T19:26:18,728][INFO ][o.e.n.Node               ] [qsMnsrD] started
+[2017-07-17T19:28:23,663][INFO ][o.e.m.j.JvmGcMonitorService] [qsMnsrD] [gc][130] overhead, spent [321ms] collecting in the last [1s]
+[2017-07-17T19:28:23,701][INFO ][o.e.c.m.MetaDataCreateIndexService] [qsMnsrD] [jjdfdf] creating index, cause [auto(bulk api)], templates [], shards [5]/[1], mappings []
+[2017-07-17T19:28:23,750][WARN ][r.suppressed             ] path: /jjdfdf/df/1, params: {index=jjdfdf, id=1, type=df}
+java.lang.IllegalStateException: decision was not taken, individual object fields cannot be accessed
+	at org.elasticsearch.cluster.routing.allocation.AbstractAllocationDecision.checkDecisionState(AbstractAllocationDecision.java:106) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocateUnassignedDecision.getAllocationDecision(AllocateUnassignedDecision.java:188) ~[main/:?]
+	at org.elasticsearch.gateway.BaseGatewayShardAllocator.allocateUnassigned(BaseGatewayShardAllocator.java:65) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.innerAllocatedUnassigned(GatewayAllocator.java:123) ~[main/:?]
+	at org.elasticsearch.gateway.GatewayAllocator.allocateUnassigned(GatewayAllocator.java:112) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:321) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:290) ~[main/:?]
+	at org.elasticsearch.cluster.routing.allocation.AllocationService.reroute(AllocationService.java:275) ~[main/:?]
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$1.execute(MetaDataCreateIndexService.java:466) ~[main/:?]
+	at org.elasticsearch.cluster.ClusterStateUpdateTask.execute(ClusterStateUpdateTask.java:45) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.executeTasks(ClusterService.java:688) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.calculateTaskOutputs(ClusterService.java:667) ~[main/:?]
+	at org.elasticsearch.cluster.service.ClusterService.runTasks(ClusterService.java:623) [main/:?]
+	at org.elasticsearch.cluster.service.ClusterService$UpdateTask.run(ClusterService.java:1139) [main/:?]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:569) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.runAndClean(PrioritizedEsThreadPoolExecutor.java:238) [main/:?]
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:201) [main/:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]

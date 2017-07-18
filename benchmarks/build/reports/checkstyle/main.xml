@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.5">
+<file name="E:\GithubProjects\elasticsearch\benchmarks\src\main\java\org\elasticsearch\benchmark\routing\allocation\AllocationBenchmark.java">
+</file>
+<file name="E:\GithubProjects\elasticsearch\benchmarks\src\main\java\org\elasticsearch\benchmark\routing\allocation\Allocators.java">
+</file>
+</checkstyle>
