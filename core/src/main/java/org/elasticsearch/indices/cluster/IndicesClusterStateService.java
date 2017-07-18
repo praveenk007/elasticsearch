@@ -188,7 +188,7 @@ public class IndicesClusterStateService extends AbstractLifecycleComponent imple
             }
             return;
         }
-        System.out.println("IndicesClusterStateService applyClusterState操作：");
+        System.out.println("IndicesClusterStateService applyClusterState 8个操作：");
         System.out.println("====updateFailedShardsCache====");
         updateFailedShardsCache(state);
 

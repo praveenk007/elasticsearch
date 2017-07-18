@@ -769,7 +769,7 @@ public class ClusterService extends AbstractLifecycleComponent {
     }
 
     private void publishAndApplyChanges(TaskInputs taskInputs, TaskOutputs taskOutputs) {
-        System.out.println(LocalDateTime.now() + " ClusterService -> publishAndApplyChanges n766 " + this.getClass());
+        System.out.println(LocalDateTime.now() + " ClusterService -> publishAndApplyChanges n772 " + this.getClass());
         String str = "TaskInputs【summary=%s, inputTasks=%s】";
         str = String.format(str, taskInputs.summary, taskInputs.updateTasks);
         Pattern pattern = Pattern.compile("(shard id \\[\\[.*?]\\[.*?]])");
@@ -832,7 +832,7 @@ public class ClusterService extends AbstractLifecycleComponent {
         }
 
         logger.debug("set local cluster state to version {}", newClusterState.version());
-        System.out.println(LocalDateTime.now() +" ClusterService -> callClusterStateAppliers n820 应用新的集群状态" + this.getClass());
+        System.out.println(LocalDateTime.now() +" ClusterService -> callClusterStateAppliers 共11个 n835 应用新的集群状态" + this.getClass());
         callClusterStateAppliers(newClusterState, clusterChangedEvent);
 
         nodeConnectionsService.disconnectFromNodesExcept(newClusterState.nodes());
@@ -879,7 +879,7 @@ public class ClusterService extends AbstractLifecycleComponent {
         for (ClusterStateApplier applier : clusterStateAppliers) {
             try {
                 logger.trace("calling [{}] with change to version [{}]", applier, newClusterState.version());
-                System.out.println(LocalDateTime.now() + " ClusterService -> applyClusterState n867 , applier=" + applier.getClass());
+                System.out.println(LocalDateTime.now() + " ClusterService -> applyClusterState n882 , applier=" + applier.getClass());
                 applier.applyClusterState(clusterChangedEvent);
             } catch (Exception ex) {
                 logger.warn("failed to notify ClusterStateApplier", ex);

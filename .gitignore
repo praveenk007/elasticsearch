@@ -5,3 +5,10 @@
 *.ipr
 *.iws
 build-idea/
+build/
+.gradle/
+lib/
+out/
+logs/
+
+
