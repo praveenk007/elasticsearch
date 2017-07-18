@@ -1,0 +1,16 @@
+
+# intellij files
+.idea/
+*.iml
+*.ipr
+*.iws
+build-idea/
+build/
+.gradle/
+lib/
+out/
+logs/
+.github/
+
+
+
